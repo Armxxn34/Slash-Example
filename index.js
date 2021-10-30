@@ -20,9 +20,9 @@ client.once('ready', () => {
 	console.log('Ready!');
 console.log('online')
      const activities = [
-    `/help`,
-    `coins`,
-    `CoinHome Support`
+    `Commands`,
+    `Slash`,
+    `Armxxn34`
     //y'all can add more ig
   ];
   let i = 0;
@@ -42,11 +42,7 @@ if(command.cooldowns != undefined && command.cooldown == undefined || command.co
             }
             if(command.cooldowns != undefined) {
                 if(command.cooldowns.has(interaction.member.id)) {
-                   const CooldownEmbed = new Discord.MessageEmbed()
-                    .setTitle('CoolDown alert!')
-                      .setDescription(`Seems your on cooldown, you only need to wait ${command.cooldown}s`)
-                        .setColor('RANDOM')
-                    return await interaction.reply({embeds: [CooldownEmbed]})
+                    return await interaction.reply("")
                       console.log(cooldowns)
                 }
             }
@@ -63,7 +59,7 @@ if(command.cooldowns != undefined && command.cooldown != undefined){
 }               
 	} catch (error) {
 		console.error(error)
-		return interaction.reply({ content: 'There was an error while executing this command!\n If you want, you can send the following error to our support server.\n```js'+ error + '```', ephemeral: true });
+		return interaction.reply({ content: 'error occured' ephemeral: true });
 	}
 });
 
